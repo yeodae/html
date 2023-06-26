@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 700px;
+            height: 800px;
+            margin: 0 auto;
+        }
+        .main{
+            line-height: 50px;
+            margin-bottom: 30px;
+        }
+        ul{
+            list-style: none;
+            padding-left: 0px;
+        }
+        .ma{
+            width: 400px;
+            height: 35px;
+            float:right;
+            margin-right: 100px;
+        }
+        .t{
+            float: right;
+            margin-right: 100px;
+            width: 400px;
+            margin-bottom: 30px;
+        }
+        select
+        {
+            width: 100px;
+            float: right;
+            margin-right: 405px;
+            margin-top: 5px;
+            height: 30px;
+        }
+        .main2{
+            width: 670px;
+            height: 50px;
+            
+        }
+        #ynm{
+            margin: 15px auto;
+            text-align: center;
+        }
+        .yn{
+            width: 150px;
+            height: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="">
+    <div id="container">
+    <h1>회원 가입을 환영합니다!</h1>
+    
+    <fieldset class="main">
+        <legend>사용자 정보</legend>
+        <ul>
+            <li>
+                <label class="li_label">아이디</label>
+                <input type="text" placeholder="4자 ~ 10자 사이, 공백없이" required autofocus class="ma">
+            </li>
+            <li>
+                <label class="li_label">이메일</label>
+                <input type="text" class="ma">
+            </li>
+            <li>
+                <label class="li_label">비밀번호</label>
+                <input type="password" placeholder ="문자와 숫자, 특수 기호 포함" required class="ma">
+            </li>
+            <li>
+                <label class="li_label">비밀번호 확인</label>
+                <input type="password" class="ma">
+            </li>
+            <li>
+                <label class="li_label">생년월일 </label>
+                <input type="date" class="ma">
+            </li>
+            <li>
+                <label>가입 경로 
+                    <select>
+                    <option value="블로그">블로그</option>
+                    <option value="검색">검색</option>
+                    <option value="SNS">SNS</option>
+                    <option value="기타">기타</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+                <label>메모 <textarea cols="40" rows="5" placeholder="남길 말씀이 있다면 여기에" class="t"></textarea></label>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset class="main2">
+        <legend>이벤트와 새로운 소식</legend>
+        <label><input type="radio" name="mail" value="yes"> 메일 수신</label>
+        <label><input type="radio" name="mail" value="no" checked> 메일 수신 안함</label>
+    </fieldset>
+        <div id="ynm">
+    <input type="submit" value="가입하기" class="yn"> 
+    <input type="reset" value="취소" class="yn"> 
+    </div>
+</div>
+</form>
+</body>
+</html>

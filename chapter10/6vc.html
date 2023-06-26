@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>
+        li{
+            list-style: none;
+            display: inline-block;
+            margin: 15px auto;
+            background-color: #ccc ;
+            padding: 15px;
+            width: 150px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+        #container{
+            width: 800px;
+            margin: 0px auto;
+        }
+        .cont{
+            border: 2px solid black;
+            margin: 30px auto;
+            width: 500px;
+            line-height: 30px;
+            text-align: left;
+            border-radius: 5px;
+         }
+         p{
+            margin: 30px 30px 50px 30px;
+         }
+         /* li:hover{
+            background-color: tomato;
+            color: white;
+         } */
+         #first:target{
+            background-color: black;
+            color: white;
+         }
+         #second:target{
+            background-color: tomato;
+            color: white;
+         }
+         #third:target{
+            background-color: aquamarine;
+            color: black;
+         }
+         /* ul{
+            position: fixed;
+         } */
+         a:hover,a:focus{
+            background-color: tomato;
+            color: white;
+         }
+         a:link,a:visited{
+            text-decoration: none;
+            color: black;
+         }
+         a:active{
+            color: white;
+         }
+    </STYle>
+</head>
+<body>
+    <div id="container">
+    <ul>
+        <li><a href="#first">첫번째 메뉴</a></li>
+        <li><a href="#second">두번째 메뉴</a></li>
+        <li><a href="#third">세번째 메뉴</a></li>
+        <li><a href="#">네번째 메뉴</a></li>
+    </ul>
+
+    <div id="first" class="cont">
+        <p>Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu sint aute sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Irure exercitation tempor aliqua laboris cupidatat anim in non officia aliquip excepteur fugiat labore.</p>
+    </div>
+    <div id="second" class="cont">
+    <p>Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur elit exercitation. Commodo veniam sit quis nisi ea. Ipsum do aliqua nostrud laboris elit duis adipisicing id Lorem qui. Labore dolor ipsum enim incididunt. Velit qui cillum sunt labore incididunt duis aute Lorem nulla et. Sint commodo aute amet laboris ullamco exercitation Lorem dolore veniam ut reprehenderit incididunt. Laborum nulla eiusmod cillum irure anim aute.</p>
+    </div>  
+    <div id="third" class="cont" style="margin-bottom: 300px;"><p>Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum commodo quis quis et ad. Incididunt adipisicing enim laboris voluptate.</p> 
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: blue;
+            font-weight: bold;
+        }
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        tr,td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="clickEvent()">클릭</button>
+    <h1>어서오세요</h1>
+</body>
+</html>
+<script>
+        //  function clickEvent(){
+        // var name = prompt("이름이 뭐니?");
+        // // console.log(name);
+        // document.write("<h1>어서오세요</h1>");
+        // document.write("<div><span style='color : blue;'>"+name+"</span>님 환영합니다.</div>");
+        
+        document.write("<table>");
+        for(var i=2; i<=9; i++){
+            document.write("<tr>");
+            for(var j=2; j<=9; j++){
+                document.write("<td>"+i+"x"+j+"="+i*j+"</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+  
+</script>

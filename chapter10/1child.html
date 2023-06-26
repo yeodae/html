@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container > p{
+            color: red;
+        }
+        .p_color > p{
+            background-color: #ccc;
+        }
+        .p_color ~.div_color p{
+            color: blue;
+        }
+        .p_color .div_color {
+            color: green;
+        }
+        #container p{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>HTML/CSS/JAVASCRIPT</h1>
+        <p> HTML 태그는 쉽다</p>
+        <p> 미디어쿼리는 중요하다</p>
+        <div class="p_color">
+            <p>CSS는 어렵다</p>
+            <div class="div_color">
+                <p>오라클은 재밌다</p>
+                <h2> JQuery 꿀잼</h2>
+                <span>JSP는 노잼</span>
+            </div>
+            <p>JAVASCRIPT는 더 어렵다</p>
+       </div>
+       <div class="div_color">
+       <p> 자바는 쉬웠다</p>
+    </div>
+</div>
+    
+</body>
+</html>
