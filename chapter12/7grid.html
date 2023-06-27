@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            grid-template-rows: minmax(100px,auto);
+            grid-gap: 20px 10px;
+        }
+        .cls1{
+            background-color:indigo;
+        }
+        .cls1:nth-child(odd){
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="cls1">
+            Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu sint aute sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Irure exercitation tempor aliqua laboris cupidatat anim in non officia aliquip excepteur fugiat labore.
+        </div>
+        <div class="cls1">
+            Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur elit exercitation. Commodo veniam sit quis nisi ea. Ipsum do aliqua nostrud laboris elit duis adipisicing id Lorem qui. Labore dolor ipsum enim incididunt. Velit qui cillum sunt labore incididunt duis aute Lorem nulla et. Sint commodo aute amet laboris ullamco exercitation Lorem dolore veniam ut reprehenderit incididunt. Laborum nulla eiusmod cillum irure anim aute.
+        </div>  
+        <div class="cls1">
+            Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum commodo quis quis et ad. Incididunt adipisicing enim laboris voluptate. 
+        </div>
+        <div class="cls1">
+            Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum commodo quis quis et ad. Incididunt adipisicing enim laboris voluptate. 
+        </div>
+        <div class="cls1">
+            Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum commodo quis quis et ad. Incididunt adipisicing enim laboris voluptate. 
+        </div>
+    </div>
+</body>
+</html>

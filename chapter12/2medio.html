@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .font1{
+            font-size: 50px;
+            color: blue;
+        }
+        @media screen and (max-width:1024px){
+            .font1{
+            font-size: 30px;
+            color: red;
+            background-color: #ccc;
+            }
+        }
+        @media screen and (max-width:768px){
+            .font1{
+            font-size: 20px;
+            color: tomato;
+            background-color: #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- font1 클래스를 기본 폰트사이즈 50px 컬러 블루 -->
+    <!-- 화면이 1024px 이하 일경우 기본 폰트사이즈 30px 컬러 레드 
+    백그라운드 컬러 #ccc-->
+    <!-- 화면이 768px 이하 일경우 기본 폰트사이즈 20px 컬러 토마토 
+    백그라운드 컬러 #eee-->
+    <div class="font1">HTML/CSS/JAVASCRIPT</div>
+</body>
+</html>

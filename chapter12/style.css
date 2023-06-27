@@ -1,0 +1,82 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background:rgb(9, 100, 160);
+}
+#container {
+    width:1140px;
+    margin:50px auto;
+    text-align: center;
+    
+}    
+.card {
+    float:left; 
+    width:550px;
+    height:250px;
+    margin:10px;
+    border:1px solid #0f0f0f33;
+    background-color:#ffffff;      
+}
+.img1{
+    background:url(짜장.jpg) no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 100%;
+    float: left;
+}
+.img2{
+    background:url(짬뽕.jpg) no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 100%;
+    float: left;
+}
+.words{
+    /* float: left; */
+    margin-top: 50px;
+}
+@media screen and (min-width:768px) and (max-width:1400px) {
+    #container {
+        width:570px;        
+        margin:50px auto;
+    }
+    .card { 
+        width:550px;
+        height:250px;
+        margin:20px 10px;
+        border:1px solid #0f0f0f33;
+        background-color:#ffffff;      
+    }
+    .img1{
+        height: 100%;
+    }
+}
+@media screen and (max-width:768px){
+    #container {
+        width:350px;        
+        margin:50px auto;
+    }
+    .card { 
+        width:300px;
+        height:450px;
+        margin:20px 10px;
+        border:1px solid #0f0f0f33;
+        background-color:#ffffff;   
+    }
+    .img1,.img2{
+        height: 300px;
+        width: 100%;
+    }
+    .words{
+
+        float:left;
+        margin-left: 60px;
+        margin-top: 30px;
+        
+    }
+   
+    
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>플렉스 박스 레이아웃</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container {
+      float:left;
+      width:200px;
+      height:150px;
+      display:flex;          /* 플렉스 컨테이너 지정 */
+      flex-flow: row wrap;   /* 왼쪽에서 오른쪽, 여러 줄 표시 */
+      border:1px solid #675f5f;
+      background-color:hsl(0, 0%, 93%);
+      color:#fff;
+      text-align: center;
+      margin:30px;
+      /* align-content:center; */
+      /* justify-content: center; */
+      
+    }
+    .box {
+      width:70px;
+      background-color:#4a4646;
+      border: 1px solid tomato;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container" id="opt1">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+  </div>
+  
+</body>
+</html>
+​
+<!-- /* justify-content: center; */
+/* text-align: center; */
+
+/* flex-direction: row; */
+/* row값 = 디폴트값 row*/
+
+/* flex-wrap:wrap; */
+
+flex-flow:row wrap;
+/* 한번에 row wrap 줄 수 있는 명령어 */ -->
+
+<!-- /* justify-content: flex-end; */
+/* 주축의 끝점에 맞춰서 != start는 시작점*/ 
+
+/* justify-content: center; */
+/* 가운데 */
+
+/* justify-content: space-between; */
+/*시작과 끝 기준으로 같은 간격으로 맞춰서 조절 */
+
+/* justify-content: space-around; */
+/* 전체를 같은 간격으로 맞추되 중앙집중형 */ -->
+

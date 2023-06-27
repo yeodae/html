@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      background-color:#eee;
+      border:1px solid #222;
+      margin-bottom:30px;
+      display: flex;
+
+      /* justify-content: flex-end; */
+      /* 주축의 끝점에 맞춰서 != start는 시작점*/ 
+      
+      /* justify-content: center; */
+      /* 가운데 */
+      
+      /* justify-content: space-between; */
+      /*시작과 끝 기준으로 같은 간격으로 맞춰서 조절 */
+
+      justify-content: space-around;
+      /* 전체를 같은 간격으로 맞추되 중앙집중형 */
+     
+    }
+    .box {
+      padding:5px 45px;
+      margin:5px;   
+      background-color:#222;  
+      color: white; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+  </div>
+</body>
+</html>
+<!-- /* justify-content: center; */
+/* text-align: center; */
+
+/* flex-direction: row; */
+/* row값 = 디폴트값 row*/
+
+/* flex-wrap:wrap; */
+
+flex-flow:row wrap;
+/* 한번에 row wrap 줄 수 있는 명령어 */ -->
