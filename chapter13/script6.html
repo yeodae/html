@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .btn2{
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <div class="text">JAVASCRIPT 꿀잼</div>
+    <button class="btn" onclick="hide()">감추기</button>
+</div>
+    <button class="btn2" onclick="show()" style="display: none;">다시호출</button>
+</body>
+</html>
+<script>
+    //show();
+    let text = document.querySelector('.text');
+    let btn = document.querySelector('.btn');
+    let btn2 = document.querySelector('.btn2');
+    
+    function hide(){
+        text.style.display="none";
+        btn.style.display="none";
+        
+        btn2.style.display="block";
+    }
+    function show(){
+        btn2.style.display="none";
+        text.style.display="block";
+        btn.style.display="block";
+    }
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+            color: blue;
+        }
+        td{
+            border: 1px solid black;
+            padding: 20px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div style="background-color: #ccc;"></div>
+</body>
+</html>
+<script>
+    // var num = prompt("원하는 단을 입력하세요.");
+    var num = 9;
+    var num2 = 1;
+    document.write("<table>");
+    for(var i=2; i<=10; i++){
+            document.write("<tr>");
+            for(var j=1; j<=9; j++){
+                
+                
+                if(num==j && num2==j){
+                    document.write("<td style='background-color:green'>"+i+"x"+j+"="+i*j+"</td>")
+                }
+                else if(num==j){
+                document.write("<td style='background-color:#ccc'>"+i+"x"+j+"="+i*j+"</td>")
+                }
+                else if(num2==j){
+                    document.write("<td style='background-color:tomato'>"+i+"x"+j+"="+i*j+"</td>")
+                }
+                else{
+                    document.write("<td>"+i+"x"+j+"="+i*j+"</td>")
+                }
+            }
+            num2++;
+            num--;
+            document.write("</tr>");
+    }
+    document.write("</table>");
+
+    
+</script>

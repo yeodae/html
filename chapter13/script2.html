@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      color : red;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div id="js1">자바스크립트 실습 예제</div>
+  <button onclick="clickEvent()">클릭</button>
+  <button id="btn1">클릭2</button>
+  <br>
+  <div class="js2">클릭 예제 22</div>
+</body>
+</html>
+<script>   
+    //좋은예
+    var ex = document.querySelector('.js2');
+        ex.onclick = function(){
+            console.log(ex.style.color);
+            // ex.style.color = "blue";
+            ex.style.backgroundColor = "#ccc";
+            ex.style.border="1px solid black";
+
+            if(ex.style.color=="blue"){
+                ex.style.color = "red";
+            }else{
+                ex.style.color = "blue";
+            }
+        }
+        //자바 관점
+        // var num=1;
+        // var ex = document.querySelector('.js2');
+        // ex.onclick = function(){
+        //     if(num%2==1){
+        //     ex.style.color = "blue";
+        // }else{
+        //     ex.style.color = "red";
+        // }
+        // num++;
+
+
+
+    // var ex = document.querySelector('.js2');
+    //     ex.onclick = function(){
+    //         ex.style.color = "blue";
+    //         ex.style.backgroundColor = "#ccc";
+    //         ex.style.border="1px solid black";
+    //     }
+
+     var btn = document.querySelector('#btn1');
+        btn.onclick = function(){
+        btn.style.backgroundColor = "black";
+        btn.style.color = "white";
+        btn.style.fontSize="30px";
+    }//클릭시 버튼 배경색,컬러 바꾸기
+
+    // var btn = document.querySelector('#btn1');
+    // btn.onclick = function(){
+    //     var obj = document.querySelector('#js1');
+    //     obj.style.color = "blue";
+    // }
+
+  function clickEvent(){
+    var obj = document.querySelector('#js1');
+    console.log(obj);
+    obj.style.color = "blue";
+  }
+</script>
