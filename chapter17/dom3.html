@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="link" href="https://www.naver.com">네이버</a>
+    <button class="btn1" onclick="change()">다음으로 변경</button>
+</body>
+</html>
+<script>
+    
+    function change(){
+        var link = document.getElementById("link");
+        var btn = document.querySelector(".btn1");
+        // console.log(link.href);   
+        if(link.innerText=="네이버"){
+            // link.innerHTML = "<div><a href='https://www.daum.net'>다음</a></div>";
+            link.innerHTML = "다음";
+            link.href = "https://daum.net";
+            btn.innerHTML = "네이버로 변경";
+        }else{
+            // link.innerHTML = "<div>네이버</div>";
+            link.innerHTML = "네이버";
+            link.href = "https://www.naver.com";
+            btn.innerHTML = "다음으로 변경";
+        }
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM event 객체</title>
+  <style>
+    #container {
+      width:300px;
+      margin:10px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img onclick="change()" src="cup-1.png" alt="red" id="cup">		
+  </div>
+
+	<script>
+		var cup = document.getElementById("cup");
+        function change(){
+            if(cup.alt == "red"){
+                cup.src="cup-2.png";
+                cup.alt="blue";
+            }else{
+                cup.src="cup-1.png";
+                cup.alt="red";
+            }
+        }
+   
+	</script>
+</body>
+</html>

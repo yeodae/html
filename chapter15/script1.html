@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .time{
+
+            font-size: xx-large;
+            font-weight: bold;
+            color: blue;
+            margin-top: 100px;
+            display: inline-block;
+                        
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <div class="text">현재 시각</div> -->
+    <span>현재 시각</span>
+    <div class="time"></div>
+</body>
+</html>
+<script>
+    
+    // var time = new Date();
+    // document.write(time.toLocaleTimeString()); //현재 시간 오전~~
+    // var obj = document.querySelector('.time'); // 객체생성
+    // obj.innerHTML = time.toLocaleTimeString(); 
+    // 해당 태그에 값을 입력 ex"안녕"
+
+    
+    setInterval(now,1000);
+    //특정 주기가 될때마다 해당 코드를 실행
+    //1초마다 now함수 호출
+    
+    function now(){
+        var time = new Date();
+        var obj = document.querySelector('.time'); // 객체생성
+        obj.innerHTML = time.toLocaleTimeString(); 
+    }
+</script>

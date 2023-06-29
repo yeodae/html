@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="listodd">자바 프로그래밍</li>
+        <li id="listEven">오라클 데이터 베이스</li>
+        <li class="listodd">HTML/CSS</li>
+        <li name="listEven">JAVASCRIPT</li>
+        <li class="listodd">JSP</li>
+    </ul>
+</body>
+</html>
+<script>
+    // var list = document.getElementsByTagName("li");
+    // console.log(list);
+    // for(var i in list){
+    //     console.log(list.item(i));
+    //     list.item(i);
+    //     list.item(i).style.color = "red";
+    //     // list[i].style.color = "red";
+    // }
+
+    var obj = document.getElementById("listEven");
+    obj.style.color = "red";
+    //중복된 id에 값을줄때 id보단 클래스주기 //중복불가
+    
+    var obj2 = document.getElementsByClassName("listodd");
+    // console.log(obj2);
+    // obj2.style.color = "blue";
+
+    for(var i in obj2){
+        obj2.item(i).style.color = "blue";
+        // obj2[i].style.color = "blue";
+    }
+
+    var obj3 = document.getElementsByName("listEven");
+    // obj3.style.color = "green";
+    // console.log(obj3);
+    for(var i in obj3){
+        obj3[i].style.color = "green";
+    }
+
+
+    
+</script>

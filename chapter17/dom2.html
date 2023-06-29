@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아나나아나나</title>
+</head>
+<body>
+    <div class="txt">
+        자바 스크립트
+    </div>
+    <button onclick="hide()">과목 변경</button>
+    
+    <!-- <span>자바스크립트</span>
+        <span>재밌다</span> -->
+
+    <!-- <div class="liOdd">테스트</div>
+    <ul>
+        <li class="liOdd">자바 프로그래밍</li>
+        <li>오라클 데이터 베이스</li>
+        <li class="liOdd">HTML/CSS</li>
+        <li>JAVASCRIPT</li>
+        <li class="liOdd">JSP</li>
+    </ul> -->
+</body>`
+</html>
+<script>
+    // var txt = document.querySelector(".txt");
+    // txt.innerHTML = "오라클 데이터 베이스";
+    // alert(txt.innerHTML);
+    
+    function hide(){    
+        var txt = document.querySelector(".txt");
+        if(txt.innerText == "오라클 데이터 베이스"){
+            txt.innerHTML = "<div style='color : blue;'> 자바스크립트 </div>"
+        }else{
+            txt.innerHTML = "<div style='color : tomato;'> 오라클 데이터 베이스 </div>"
+        }
+        // txt.innerHTML = "오라클 데이터 베이스";
+        
+    }
+
+    var list = document.querySelectorAll("li.liOdd");
+    // for(var i=0; i<list.length; i++){
+    //     list[i].style.color="tomato";
+    // }
+
+    // document.write(document.title);
+    // 타이틀 불러오기
+    
+    // var liOd = document.querySelector("liOdd");
+    for(var i=0; i<list.length; i++){
+        document.write("<div style='color : red;'>" + list[i].innerHTML + "</div>");
+        // obj.innerHTML = time.toLocaleTimeString();
+    }
+</script>

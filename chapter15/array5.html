@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var arr1 = [10,30,20];
+    var arr2 = ["홍길동","옥한빛","김철수","귀살대"];
+
+    // var str = "자바스크립트";
+    // document.write(str[1]);
+    // document.write(str.charAt(2));
+    var array1 = arr1.concat(arr2);
+    document.write(array1 + "<br>");
+
+    var array2 = arr1.join('/');
+    document.write(array2+ "<br>");
+    
+    var array3Length = arr1.push(40);
+    document.write(arr1+ "<br>");
+
+    arr1.push(40); //맨뒤에 배열값추가
+    arr1.unshift(0); // 맨앞에 배열값추가
+    document.write(arr1+ "<br>");
+    arr1.shift(); // 맨앞에 배열값제거
+    document.write(arr1+ "<br>");
+    arr1.pop();//마지막 배열값 제거
+    document.write(arr1+ "<br>");
+
+</script>
