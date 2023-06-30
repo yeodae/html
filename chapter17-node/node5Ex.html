@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>사전 추가</div>
+    <input id="input" type="text">
+    <button onclick="add()">추가</button>
+    <hr>
+    <ul id="list">
+
+    </ul>
+    <!-- <li id="li"></li> -->
+</body>
+</html>
+<script>
+    
+    function add(){
+        var list = document.getElementById("list");
+        var li = document.createElement("li");
+        var input = document.getElementById("input");
+        var txt = document.createTextNode(input.value);
+        // li.setAttribute(input);
+        li.appendChild(txt);
+        list.appendChild(li);
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <ul id="list">Nodes
+        <li>자바 포르개리밍</li>
+        <li>오라클 데이터 베이스</li>
+        <li>HTML/CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>JSP</li>
+    </ul>
+    <ul>
+        <li>프로젝트</li>
+    </ul>
+</body>
+</html>
+<script>
+    // childNodes =>자식 노드들
+    // firstChild => 첫번째 자식 노드
+    // lastChild => 마지막 자식 노드
+    // nextSibling => 다음 형제 노드
+    // previousSibling -> 이전 형제 노드
+
+
+    var list = document.getElementById("list");
+    // console.log(list.childNodes[1]);//inDex관점 접근 
+    // console.log(list.childNodes[1].childNodes[0].nodeValue); //쌍따옴표 제거후 출력 
+    // console.log(list.firstChild);//문자열 바로출력
+    // console.log(list.lastChild.nodeValue);
+
+    console.log(list.nextSibling.nextSibling);
+
+    // for(var i = 0; i<list.childNodes.length; i++){
+    //     console.log(list.childNodes[i], "==>" , list.childNodes[i].nodeType);
+    //     if(list.childNodes[i].nodeType != 3){
+            // 노드타입이 3이 아닌것만 출력
+        // }
+    // }
+    // console.log(list.childNodes[5].childNodes[0].nodeValue);
+    // console.log(list.childNodes[5].childNodes[0].nodeValue="zzz");
+    
+    
+</script>

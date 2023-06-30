@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="jsp">JSP</h3>
+
+    <div id="list">Nodes
+        <div id="java">자바 포르개리밍</div>
+        <div id="oracle">오라클 데이터 베이스</div>
+        <div id="html">HTML/CSS</div>
+        <div id="js">JAVASCRIPT</div>
+    </div>
+
+    <button onclick="add()">list에 추가</button>
+</body>
+</html>
+<script>
+    //마지막 노드에 추가
+    // function add(){
+    //     var list = document.getElementById("list");
+    //     var item = document.getElementById("jsp");
+    //     list.appendChild(item);
+    //선택요소를 자식노드에 넣겠다.
+    // }
+
+    // function add(){
+    //     var list = document.getElementById("list");
+    //     var item = document.getElementById("jsp");
+    //     var oracle = document.getElementById("oracle");
+    //     list.insertBefore(jsp, oracle);
+    //     // jsp를 oracle앞에 추가하겠다.
+    // }
+
+    //오라클 데이터베이스 => 오라클(oracle) 데이터베이스
+     function add(){
+        // var list = document.getElementById("list");
+        // var item = document.getElementById("jsp");
+        // var oracle = document.getElementById("oracle");
+        
+        var oracle = document.getElementById("oracle").firstChild;
+        oracle.insertData(3, "(oracle)");
+    }
+</script>

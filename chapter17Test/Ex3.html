@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        li{
+            list-style: none;
+            float: left;
+            margin-left: 30px;
+            width: 300px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        
+        }
+        input{
+            
+            float:right;
+            height: 20px;
+            width: 170px
+        }
+        
+        #container{
+            background-color: white;
+            width: 900px;
+            margin: 0 auto;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        select{
+            margin-left: 50px;
+        }
+        fieldset{
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+        .button{
+            margin: 0 auto;
+            width: 70px;
+            height: 40px;
+        }
+
+       @media screen and (max-width : 1240px){
+        #container{
+            background-color: white;
+            width: 600px;
+            margin: 0 auto;
+            border: 2px solid black;
+            padding: 10px;
+            
+        }
+        .ss{
+            margin-left: 400px;
+        }
+       }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="">
+            <button id="btn" onclick="change()" class="ss">판매회원으로 가입하기</button>
+        <fieldset id="list">
+            <legend><h3>로그인 정보</h3> </legend>
+            <!-- <ul> -->
+                <li>
+                    <label>아이디 <input id="id" type="text" required></label>
+                </li>
+                <li>
+                    <label>비밀번호 <input id="pwd1" type="password"></label>
+                </li>
+                <li>
+                    <label>비밀번호 확인 <input id="pwd2" type="password" ></label>
+                </li>
+                <li id="del">
+                    <label>가입경로
+                        <select>
+                            <option value="블로그">블로그</option>
+                            <option value="인터넷">인터넷</option>
+                            <option value="지인">지인추천</option>
+                            <option value="기타">기타</option>
+                        </select>
+                    </label>
+                </li>
+            <!-- </ul> -->
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>개인 정보</h3> </legend>
+                <li>
+                    <label>이름 <input id="name" type="text" placeholder="5자미만 공백없이"></label>
+                </li>
+                <li>
+                    <label>메일 주소 <input id="email" type="text" placeholder="abcde@naver.com"></label>
+                </li>
+                <li>
+                    <label>연락처 <input type="text"></label>
+                </li>
+        </fieldset>
+        <div id="last" class="button">
+        <button onclick="join()" type="submit" style="height: 40px; width: 40px; border-radius: 20px;">제출</button>
+    </div>
+    </form>
+    </div>
+</body>
+</html>
+<!--
+조건 1. 알림은 모두 alert창을 통해 출력
+조건 2. 아이디를 입력하지 않고 '제출' 버튼을 클릭할 경우 '아이디를 입력해주세요' 알림창 출력
+조건 3. 비밀번호와 비밀번호확인 요소의 값이 일치하지 않을 경우 '비밀번호가 일치하지 않습니다.' 알림창 출력
+조건 4. 이름을 5글자 이상 입력 후 제출 버튼을 클릭할 경우 '이름은 5글자 미만으로 입력해 주세요. 알림창 출력
+조건 5. 오른쪽 상단에 '판매회원으로 가입하기' 버튼 클릭 시 이미지와 같이 '사업자번호' 입력 영역을 추가(빨간색 속성 부여)하고 '회원등급' 영역을 삭제하시오.
+또한, '판매회원으로 가입하기' 버튼의 이름을 '구매회원으로 가입하기'로 수정하시오.
+('구매회원으로 가입하기'로 바뀐 후 버튼을 클릭했을 시에는 아무런 변화가 없어도 상관없음.) 
+-->
+<script>
+    function change(){
+        var btn = document.getElementById("btn");
+        btn.innerHTML="구매회원으로 가입하기";
+        
+        var list = document.getElementById("list");
+        var del = document.getElementById("del");
+        list.removeChild(del);
+
+        var li = document.createElement("li");
+        li.innerHTML = "<label style='color: red;'>사업자번호 <input id='sb' type='text'></label>"
+        list.appendChild(li);
+    }
+
+    function join(){
+        var id = document.getElementById("id");
+        if(id.value == undefined || id.value == ""){
+            alert("id입력");
+            return;
+        }
+        var pwd1 = document.getElementById("pwd1");
+        var pwd2 = document.getElementById("pwd2");
+        if(pwd1.value != pwd2.value){
+            alert("pw다름");
+            return;
+        }
+        var name = document.getElementById("name");
+        if(name.value.length >= 5){
+            alert("5글자아래로이름");
+            return;
+        }
+    }
+        
+</script>

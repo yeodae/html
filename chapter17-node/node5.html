@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="pro">PROJECT</h3>
+
+    <div id="list">
+        <div id="java">자바 포르개리밍</div>
+        <div id="oracle">오라클 데이터 베이스</div>
+        <div id="jsp">JSP</div>
+        <div id="html">HTML/CSS</div>
+        <div id="js" style="color:red">JAVASCRIPT</div>
+    </div>
+    <button onclick="remove()">삭제</button>
+    <button onclick="copy()">복사</button>
+    <button onclick="add()">추가</button>
+</body>
+</html>
+<script>
+    function remove(){
+        var list = document.getElementById("list");
+        var jsp = document.getElementById("jsp");
+        
+        list.removeChild(jsp);
+
+        var js = document.getElementById("js");
+        js.removeAttribute("style");
+
+        var h3 = document.getElementById("pro");
+        list.appendChild(h3);
+    }
+    function copy(){
+        var list = document.getElementById("list");
+        var h3 = document.getElementById("pro");
+        list.appendChild(h3.cloneNode(true));
+    }
+
+    // function add(){
+    //     var list = document.getElementById("list");
+    //     var jsp = document.getElementById("jsp");
+
+    //     list.insertBefore(jsp,oracle);
+    // }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="cup" onclick="on()" src="cup-1.png" alt="red">
+</body>
+</html>
+<script>
+    // function on(){
+    //     alert("안녕");
+    // }
+    // var obj = document.getElementById("cup");
+    // obj.onclick = function(event){
+    //     console.log(event);
+    //     alert("x : "+event.pageX+", y : "+event.pageY);
+    // }
+    var obj = document.getElementById("cup");
+    obj.addEventListener("mouseover",change1);
+    obj.addEventListener("mouseout",change2);
+
+    function change1(){
+        obj.src = "cup-2.png";
+    }
+    function change2(){
+        obj.src = "cup-1.png";
+    }
+</script>

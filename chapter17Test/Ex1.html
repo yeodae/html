@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th,td{
+            border: 2px solid navy;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 30px;
+        }
+        th{
+            color: red;
+        }
+        th{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<!-- 조건 1. 알파벳 부분은 th태그를 이용, 숫자 부분은 td태그를 이용
+조건 2. th영역은 배경색을 #ccc로 지정
+조건 3. td영역의 텍스트는 빨간색으로 지정
+조건 4. 텍스트는 가운데 정렬할 것
+조건 5. 아래와 동일한 모양을 만들 것. -->
+<body>
+    <div id="container">
+        <div class="ex1">
+            <table>
+                <tr>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+            </tr>
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td colspan="2">4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>
