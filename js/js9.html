@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        /* #container{
+            width: 350px;
+            height: 350px;
+        } */
+        
+        body{
+            position: relative;
+        }
+        .fix{
+            top: 300px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div class="box1"></div>
+</div>
+    <div class="fix">
+        <button id="get">getter</button>
+        <button id="set">setter</button>
+        <div id="txt"></div>
+</div>
+</body>
+</html>
+<script>
+    $(function(){
+        $("#get").on("click",function(){
+            $(".box1").css("backgroundColor","tomato");
+            console.log("너비 : ",$(".box1").width());
+            console.log("높이 : ",$(".box1").height());
+        })
+        $("#set").on("click",function(){
+            $(".box1").css("backgroundColor","green");
+            //버튼 클릭할 때 마다 이미지 크기 절반
+            width = $(".box1").width();
+            height = $(".box1").height();
+            $(".box1").width(width/2).height(height/2);
+
+            $("#txt").html("너비 : "+$(".box1").width()+"px, 높이 : "+$(".box1").height()+"px");
+        })
+    })
+</script>

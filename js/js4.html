@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        {
+            display: block;
+        }
+    </style>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+
+<input type="checkbox" value="java"><span>자바 프로그래밍</span><br>
+<input type="checkbox" value="oracle"><span>오라클 데이터베이스</span><br>
+<input type="checkbox" value="html"><span>HTML/CSS/JAVASCRIPT</span><br>
+<input type="checkbox" value="jq"><span>JQUERY</span><br>
+
+    <button>출력</button>
+</body>
+</html>
+<script>
+    $(function(){
+        $("button").on("click",function(){
+            $(":checked").next().css("color","tomato");
+            $(":checked").next().text("선택했다.");
+            //체크된박스 //check의 다음 요소인 span검색
+            console.log($(":checked").next().text());
+            //text()=get //text("")=set ~동일한 이름을 갖는 get,set
+            console.log($(":checked").next().html());
+            //html :태크를 포함하는 text :태그를 포함하지 않는
+            
+        })
+    })
+</script>

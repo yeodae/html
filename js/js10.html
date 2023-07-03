@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div>
+        <button id="get">getter</button>
+        <button id="set">setter</button>
+        <span id="txt"></span>
+    </div>
+    <br>
+    <img src="/img/mic.jpg" alt="카메라">
+</body>
+</html>
+<script>
+    $(function(){
+        $("#get").on("click",function(){
+            console.log($("img").attr("src"));
+            //속성가져오기("원하는것")
+            // $("#txt").html($("img").attr("src"));
+
+            $("img").attr("src",'/img/salad.jpg')
+            // var ex = $("img").attr("src");
+            // $(ex).html()
+        })
+    })
+    $(function(){
+        $("set").on("click",function(){
+            
+        })
+    })
+</script>

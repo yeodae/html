@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <ul id="item">
+        <li>자바 프로그래밍</li>
+        <div>github</div>
+        <li><span>오라클 데이터베이스</span></li>
+        <li>HTML/CSS/JAVASCRIPT</li>
+        <li>JQUERY</li>
+        <li></li>
+    </ul>
+    <button>Click</button>
+</body>
+</html>
+<script>
+    // $("#item"); // 객체생성
+    $(function(){
+        $("button").on("click",function(){
+            // $("#item").find("li").eq(1).css("color","red");
+            //$("li");
+
+            var item = $("#item").find("li");
+            item.eq(3).css("color","blue"); //위와 동일한 코드
+
+            $("#item").find("li").eq(1).css("color","red")
+                                        .end()
+                                        .last().css("color","tomato")
+                                        .end()
+                                        .eq(0).css("color","yellowgreen");
+        })
+    })
+</script>

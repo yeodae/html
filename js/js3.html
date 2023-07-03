@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>자바 프로그래밍</li>
+        <li><span>오라클 데이터베이스</span></li>
+        <li>HTML/CSS/JAVASCRIPT</li>
+        <li>JQUERY</li>
+        <li></li>
+    </ul>
+    <div id="txt"></div>
+    <button>클릭</button>
+</body>
+</html>
+<script>
+    $(function(){
+       var list = $("li");
+       $("button").on("click",function(){
+        // console.log(list);
+        // $("#txt").text(list.length);
+        // $("li:even").css("color","red");
+
+        // $("li:eq(3)").css("color","red"); //인덱스값 변경
+        // $("li:has(span)").css("color","red"); // 자식요소검색
+        // $("li:gt(1)").css("color","red"); //1보다 큰
+        // $("li:lt(1)").css("color","red"); //1보다 작은
+
+        // $("li:first").css("color","blue");
+        // $("li:last").css("color","blue");
+
+        // $("li:empty").css("color","blue"); //자식노드가 없는
+        $("li:empty").text("JSP"); //자식노드 추가
+        
+        // $("li:parent").css("color","blue"); //자식노드가 있는전체
+        $("li:contains(R)").css("color","blue");//해당 텍스트 포함
+        $("li:contains(자)").css("color","blue");//해당 텍스트 포함
+       })
+    })
+</script>

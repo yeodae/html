@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <a href="#">링크없음</a>
+    <a href="javascript:;">링크없음2</a>
+    <button>링크 변경</button>
+</body>
+</html>
+<script>
+    $(function(){
+        $("button").on("click",function(){
+            // alert("제이쿼리로 알림창");
+            $("a[href='#']").attr("href","https://www.naver.com");
+        })
+    })
+</script>

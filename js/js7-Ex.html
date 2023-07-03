@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+  <style>
+    table {				
+				border:1px solid black;  
+        border-collapse: collapse;
+			}
+			td, th {
+				border:1px solid black;  
+				padding:10px;  
+				text-align:center;  
+        
+      }
+      th {
+        color : red;
+      }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>a</th>
+        <th>b</th>
+        <th>c</t>
+        <th>d</th>
+      </tr>
+    </thead>
+    <tbody class="list">
+      <tr>
+        <td class="hang">1</td>
+        <td class="hang">2</td>
+        <td class="hang">3</td>
+        <td class="hang">4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>   
+      <tr>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+      </tr>
+    </tbody>        
+  </table>
+  <button id="odd" onclick="odd()">홀수</button>
+    <button id="even" onclick="even()">짝수</button>
+    <button id="add">추가</button>
+</body>
+</html>
+<script>
+    $(function(){
+        $("#add").on("click",function(){
+            var num = parseInt($("td:last").text())+1;
+            $("tbody").append("<tr><td>"+ num++ +"</td><td>"+ num++ +"</td><td>"+ num++ +"</td><td>"+ num++ +"</td></tr>");
+        })
+    })
+
+    //2가지버전 (javascript, jquery)
+
+    // $(function(){
+    //     $("#odd").on("click",function(){
+    //         $("tr:even").css("backgroundColor","tomato");
+    //     })
+    // })
+    // $(function(){
+    //     $("#even").on("click",function(){
+    //         $("tr:odd").css("backgroundColor","green");
+    //     })
+    // })
+
+    // function odd(){
+    //     var tr = document.querySelectorAll("tr");
+    //     for(var i=0; i<tr.length; i++){
+    //         if(i%2==1){
+    //             tr[i].style.backgroundColor="tomato";
+    //         }
+    //     }
+    // }
+    // function even(){
+    //     var tr=document.querySelectorAll("tr");
+    //     for(var i=0; i<tr.length; i++){
+    //         if(i%2==0){
+    //             tr[i].style.backgroundColor="green";
+    //         }
+    //     }
+    // }
+</script>

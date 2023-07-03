@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <ul id="item">
+        <li>자바 프로그래밍</li>
+        <li id="oracle" class="sub">오라클 데이터베이스</li>
+        <li class="sub">HTML/CSS/JAVASCRIPT</li>
+        <li>JQUERY</li>
+        <!-- <li>JSP</li> -->
+    </ul>
+    <button id="btn">Click</button>
+</body>
+</html>
+<script>
+    $(function(){
+        $("#btn").on("click",function(){
+            // var input = prompt("써줭\n안녕");
+            // $("li").prepend("<span style='color:red;'>"+input+"</span>");
+
+            // $("li").prepend("<span style='color:red;''>노잼!!!</span>");
+            
+            // $("#item").append("<li>"+input+"</li>");
+            //맨뒤에 추가
+            // $("#item").prepend("<li>"+input+"</li>");
+            //맨앞에 추가
+            // $("#oracle").appendTo("#item");
+            // $("#oracle").prependTo("#item");
+            $("<span style='color : red;'> 노잼 !!</span>").prependTo(".sub");
+        })
+    })
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div id="java1" style="background-color: #eee;">자바 프로그래밍</div>
+    <div id="java2" style="background-color: tomato;"></div>
+    <button>변경</button>
+</body>
+</html>
+<script>
+    $(function(){
+        $("button").on("click",function(){
+            var txt = $("#java1").text(); // getter
+            // $("#java2").text($("#java1").text()); //setter
+            // $("#java2").text(txt); //setter
+            // $("#java2").text(txt).css("fontSize","50px");
+            $("#java2").html("<span style='font-size : 50px;'>"+txt+"</span>");
+        })
+    })
+    
+</script>
